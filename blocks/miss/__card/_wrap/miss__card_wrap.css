@@ -1,0 +1,14 @@
+.miss__card_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.miss__card_wrap:last-child {
+  width: 224px;
+}
+
+/* @media (max-width: 690px) {
+  .miss__card_wrap {
+    justify-content: center;
+  }
+} */

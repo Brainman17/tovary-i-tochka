@@ -1,0 +1,10 @@
+.header__burger-menu_small {
+  display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .header__burger-menu_small {
+    display: block;
+    cursor: pounter;
+  }
+}

@@ -1,0 +1,14 @@
+.card__icons {
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 690px) {
+  .card__icons {
+    margin-left: 22px;
+  }
+
+  .card__icons:first-child {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.counter__wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  color: #000;
+  width: 100px;
+  background-color: #fff;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 690px) {
+  .counter__wrap {
+    margin-bottom: 0;
+    height: 32px;
+    width: 80px;
+  }
+}

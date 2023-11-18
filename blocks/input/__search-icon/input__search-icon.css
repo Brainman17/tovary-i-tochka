@@ -1,0 +1,10 @@
+.input__search-icon {
+  position: absolute;
+  top: 13px;
+  right: -14px;
+  object-fit: cover;
+  width: 24px;
+  height: 24px;
+  opacity: 0.4;
+  cursor: pointer;
+}

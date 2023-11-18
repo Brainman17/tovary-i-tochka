@@ -1,0 +1,28 @@
+.input__group {
+  position: relative;
+  /* width: 100%; */
+}
+
+.input__group input {
+  box-sizing: border-box;
+  color: #000;
+  height: 43px;
+  outline: 0;
+  width: 100%;
+}
+
+.input__group label {
+  color: #9797af;
+  position: absolute;
+  transition: all 200ms;
+  top: 20px;
+  left: 0;
+  background-color: #fff;
+}
+.input__group input:focus + label,
+.input__group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 13px;
+  line-height: 16px;
+}

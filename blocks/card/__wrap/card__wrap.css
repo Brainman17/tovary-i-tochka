@@ -1,0 +1,26 @@
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__wrap:last-child {
+  width: 224px;
+}
+
+@media (max-width: 690px) {
+  .card__wrap {
+    max-width: 288px;
+  }
+}
+
+@media (max-width: 690px) {
+  .card__wrap:last-child {
+    position: relative;
+  }
+}
+
+@media (max-width: 690px) {
+  .card__wrap:first-child {
+    margin-bottom: 12px;
+  }
+}

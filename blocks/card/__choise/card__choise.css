@@ -1,0 +1,21 @@
+.card__choise {
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 8px 0 0;
+}
+
+.card__choise:last-child {
+  padding-left: 16px;
+}
+
+@media (max-width: 690px) {
+  .card__choise {
+    margin-top: 11px;
+  }
+
+  .card__choise:last-child {
+    display: none;
+  }
+}

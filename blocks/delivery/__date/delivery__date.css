@@ -1,0 +1,13 @@
+.delivery__date {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #cb11ab;
+  border-bottom: 1px dashed rgba(203, 17, 171, 0.2);
+}
+
+@media screen and (max-width: 690px) {
+  .delivery__date {
+    display: none;
+  }
+}

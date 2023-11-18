@@ -1,0 +1,17 @@
+.delivery__note {
+  border-radius: 8px;
+  background-color: #f6f6fa;
+  padding: 8px 8px 12px;
+  height: 52px;
+  margin-top: 12px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+@media screen and (max-width: 690px) {
+  .delivery__note {
+    background-color: #f0ecf4;
+    border-radius: 8px;
+    margin: 0;
+  }
+}

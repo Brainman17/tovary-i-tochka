@@ -1,0 +1,23 @@
+.header__title {
+  font-size: 28px;
+  font-style: normal;
+  text-align: start;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.2px;
+  max-width: 106px;
+  margin: 0;
+  margin-left: 16px;
+  margin-top: -3px;
+  font-variant: all-small-caps;
+}
+
+@media screen and (max-width: 690px) {
+  .header__title {
+    font-size: 26px;
+    margin-left: 0;
+    max-width: 200px;
+    letter-spacing: 2.9px;
+  }
+}

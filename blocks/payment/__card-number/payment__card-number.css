@@ -1,0 +1,9 @@
+.payment__card-number {
+  margin-left: 8px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000;
+  justify-content: center;
+}

@@ -1,0 +1,4 @@
+.method__wrap_adress {
+  display: flex;
+  flex-direction: column;
+}

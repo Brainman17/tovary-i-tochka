@@ -1,0 +1,14 @@
+.miss__wrap_icons {
+  margin-right: 128px;
+  display: flex;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 690px) {
+  .miss__wrap_icons {
+    position: absolute;
+    right: 2px;
+    top: 120px;
+    margin-right: 0;
+  }
+}

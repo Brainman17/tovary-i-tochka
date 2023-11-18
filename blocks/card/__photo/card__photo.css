@@ -1,0 +1,16 @@
+.card__photo {
+  display: block;
+  width: 72px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 8px;
+  padding-left: 3px;
+}
+
+@media (max-width: 690px) {
+  .card__photo {
+    padding-left: 0;
+    width: 80px;
+    height: 105px;
+  }
+}

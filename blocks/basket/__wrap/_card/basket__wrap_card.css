@@ -1,0 +1,11 @@
+.basket__wrap_card {
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 690px) {
+  .basket__wrap_card {
+    margin-top: 12px;
+  }
+}

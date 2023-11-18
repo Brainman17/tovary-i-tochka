@@ -1,0 +1,9 @@
+.payment {
+  margin-top: 28px;
+}
+
+@media (max-width: 690px) {
+  .delivery {
+    margin-top: 18px;
+  }
+}

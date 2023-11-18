@@ -1,0 +1,9 @@
+.card__wrap_price-small {
+  display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .card__wrap_price-small {
+    display: flex;
+  }
+}

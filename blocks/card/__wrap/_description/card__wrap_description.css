@@ -1,0 +1,8 @@
+.card__wrap_description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 16px;
+  max-width: 275px;
+  width: 100%;
+}

@@ -1,0 +1,5 @@
+@media screen and (max-width: 690px) {
+  .result__wrap_display_none {
+    display: none;
+  }
+}

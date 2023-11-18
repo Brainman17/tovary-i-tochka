@@ -1,0 +1,11 @@
+.card__wrap_counter {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 690px) {
+  .card__wrap_counter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

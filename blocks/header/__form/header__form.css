@@ -1,0 +1,11 @@
+.header__form {
+  position: relative;
+  margin: 0 70px 0 32px;
+  width: 69%;
+}
+
+@media screen and (max-width: 690px) {
+  .header__form {
+    display: none;
+  }
+}

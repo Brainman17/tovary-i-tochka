@@ -1,0 +1,11 @@
+.payment__wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 690px) {
+  .payment__wrap {
+    display: none;
+  }
+}

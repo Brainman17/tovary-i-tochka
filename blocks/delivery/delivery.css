@@ -1,0 +1,9 @@
+.delivery {
+  margin-top: 24px;
+}
+
+@media (max-width: 690px) {
+  .delivery {
+    margin-top: 10px;
+  }
+}

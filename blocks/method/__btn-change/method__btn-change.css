@@ -1,0 +1,13 @@
+.method__btn-change {
+  all: unset;
+  color: #cb11ab;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 690px) {
+  .method__btn-change {
+    align-self: end;
+  }
+}

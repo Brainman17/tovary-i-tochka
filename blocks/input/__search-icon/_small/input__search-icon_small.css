@@ -1,0 +1,10 @@
+.input__search-icon_small {
+  display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .input__search-icon_small {
+    display: block;
+    cursor: pounter;
+  }
+}

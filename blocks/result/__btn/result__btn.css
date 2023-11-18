@@ -1,0 +1,21 @@
+.result__btn {
+  all: unset;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #cb11ab;
+  margin-top: 21px;
+  margin-bottom: 13px;
+  text-align: center;
+  height: 44px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 690px) {
+  .result__btn {
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+}

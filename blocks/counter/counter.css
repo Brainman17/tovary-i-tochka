@@ -1,0 +1,6 @@
+@media (max-width: 690px) {
+  .counter {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,7 @@
+@media screen and (max-width: 690px) {
+  .card__icons_position_absolute {
+    position: absolute;
+    top: 8px;
+    left: 212px;
+  }
+}

@@ -1,0 +1,15 @@
+.miss__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 35px 0 0;
+}
+
+@media screen and (max-width: 690px) {
+  .miss__wrap {
+    margin-top: 45px;
+    padding-bottom: 19px;
+  }
+}

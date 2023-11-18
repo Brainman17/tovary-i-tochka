@@ -1,0 +1,6 @@
+.basket__arrow {
+  object-fit: cover;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.delivery__caption_span {
+  font-size: 13px;
+  font-style: normal;
+  color: #0cb477;
+  line-height: 16px;
+  border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+}

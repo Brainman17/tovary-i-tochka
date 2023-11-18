@@ -1,0 +1,11 @@
+.card__wrap_checkbox {
+  display: flex;
+  align-items: center;
+  align-self: baseline;
+}
+
+@media screen and (max-width: 690px) {
+  .card__wrap_checkbox {
+    position: relative;
+  }
+}

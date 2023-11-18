@@ -1,0 +1,8 @@
+.method__wrap_photo {
+  position: relative;
+  margin-left: 8px;
+}
+
+.method__wrap_photo:first-child {
+  margin-left: 0;
+}

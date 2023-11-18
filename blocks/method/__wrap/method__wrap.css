@@ -1,0 +1,11 @@
+.method__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 690px) {
+  .method__wrap {
+    margin-bottom: 8px;
+  }
+}

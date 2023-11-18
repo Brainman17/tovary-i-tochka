@@ -1,0 +1,12 @@
+.miss__wrap_description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  width: 300px;
+}
+
+@media screen and (max-width: 690px) {
+  .miss__wrap_description {
+    width: 100%;
+  }
+}

@@ -1,0 +1,17 @@
+.method__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+  color: #000;
+  margin: 0;
+}
+
+@media screen and (max-width: 690px) {
+  .method__title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+.method__wrap_one {
+  display: grid;
+  grid-template-areas: "name surname";
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 690px) {
+  .method__wrap_one {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 0;
+  }
+}

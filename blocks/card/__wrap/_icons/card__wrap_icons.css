@@ -1,0 +1,10 @@
+.card__wrap_icons {
+  align-self: end;
+}
+
+@media (max-width: 690px) {
+  .card__wrap_icons {
+    display: flex;
+    align-self: center;
+  }
+}

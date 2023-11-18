@@ -1,0 +1,25 @@
+.method {
+  padding: 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.method:last-child {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 690px) {
+  .method {
+    padding: 16px 16px 24px 16px;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+  }
+
+  .method:last-child {
+    margin-bottom: 3px;
+  }
+}

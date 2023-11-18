@@ -1,0 +1,12 @@
+.footer__menu {
+  display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .footer__menu {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 13px;
+  }
+}

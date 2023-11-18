@@ -1,0 +1,11 @@
+.card__wrap_price {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 690px) {
+  .card__wrap_price {
+    display: none;
+    flex: 0 0 auto;
+  }
+}

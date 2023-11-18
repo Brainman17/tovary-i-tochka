@@ -1,0 +1,20 @@
+.payment__label {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  background-color: #f6f6fa;
+  border-radius: 8px;
+  padding: 8px 8px 12px;
+}
+
+@media screen and (max-width: 690px) {
+  .payment__label {
+    background-color: #f0ecf4;
+    border-radius: 8px;
+    margin: 0;
+  }
+}

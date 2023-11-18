@@ -1,0 +1,11 @@
+.method__wrap_delivery-small {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 690px) {
+  .method__wrap_delivery-small {
+    margin-top: 2px;
+    margin-left: 10px;
+  }
+}

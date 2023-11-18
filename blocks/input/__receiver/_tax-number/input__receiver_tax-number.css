@@ -1,0 +1,9 @@
+.input__receiver_tax-number {
+  grid-area: "tax";
+}
+
+@media screen and (max-width: 690px) {
+  .input__receiver_tax-number {
+    margin-bottom: 0;
+  }
+}

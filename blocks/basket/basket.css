@@ -1,0 +1,20 @@
+.basket {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+  margin-right: 32px;
+  max-width: 890px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1140px) {
+  .basket {
+    max-width: 640px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .basket {
+    margin-right: 0;
+  }
+}

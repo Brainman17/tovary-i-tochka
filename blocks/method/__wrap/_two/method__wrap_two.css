@@ -1,0 +1,16 @@
+.method__wrap_two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 0px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 690px) {
+  .method__wrap_two {
+    display: flex;
+    flex-direction: column;
+    grid-column-gap: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.method__container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 16px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 690px) {
+  .method__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
