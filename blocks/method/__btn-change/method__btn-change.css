@@ -6,6 +6,11 @@
   line-height: 24px;
 }
 
+.method__btn-change:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 690px) {
   .method__btn-change {
     align-self: end;

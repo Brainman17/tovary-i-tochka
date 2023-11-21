@@ -4,4 +4,5 @@
   color: #0cb477;
   line-height: 16px;
   border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+  cursor: pointer;
 }

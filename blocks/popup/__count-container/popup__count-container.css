@@ -1,0 +1,8 @@
+.popup__count-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup__count-container .popup__count-value {
+  margin: 0;
+}

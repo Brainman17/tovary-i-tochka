@@ -1,14 +1,39 @@
-.card__icons {
+.card__icons_like {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/like.svg") no-repeat center / cover;
   margin-left: 13px;
   cursor: pointer;
 }
 
+.card__icons_like:hover {
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/like-hover.svg") no-repeat center / cover;
+}
+
+.card__icons_basket {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/basket.svg") no-repeat center / cover;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.card__icons_basket:hover {
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/basket-hover.svg") no-repeat center / cover;
+}
+
 @media screen and (max-width: 690px) {
-  .card__icons {
+  .card__icons_basket {
     margin-left: 22px;
   }
 
-  .card__icons:first-child {
+  .card__icons_like {
     margin-left: 0;
   }
 }

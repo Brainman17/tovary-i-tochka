@@ -1,0 +1,5 @@
+@media screen and (max-width: 690px) {
+  .card__choise_description_size {
+    display: none;
+  }
+}

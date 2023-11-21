@@ -4,3 +4,8 @@
   height: 20px;
   cursor: pointer;
 }
+
+.basket__arrow:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

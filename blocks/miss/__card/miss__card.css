@@ -4,7 +4,7 @@
   margin-top: 32px;
 }
 
-.miss__card_one {
+.miss__card:first-child {
   margin-top: 12px;
 }
 

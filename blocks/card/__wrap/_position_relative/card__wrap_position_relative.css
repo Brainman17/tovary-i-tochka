@@ -1,0 +1,9 @@
+.card__wrap_position_relative {
+  /* display: none; */
+}
+
+@media (max-width: 690px) {
+  .card__wrap_position_relative {
+    position: relative;
+  }
+}

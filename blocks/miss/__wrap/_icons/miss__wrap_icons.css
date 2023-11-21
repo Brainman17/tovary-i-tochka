@@ -1,7 +1,9 @@
 .miss__wrap_icons {
-  margin-right: 128px;
+  margin-right: 127px;
+  width: 55px;
+  align-items: flex-start;
   display: flex;
-  align-items: baseline;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 690px) {

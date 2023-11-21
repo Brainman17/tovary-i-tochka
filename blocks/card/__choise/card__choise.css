@@ -6,16 +6,12 @@
   margin: 8px 0 0;
 }
 
-.card__choise:last-child {
-  padding-left: 16px;
+.card__choise:first-child {
+  padding-right: 16px;
 }
 
 @media (max-width: 690px) {
   .card__choise {
     margin-top: 11px;
-  }
-
-  .card__choise:last-child {
-    display: none;
   }
 }

@@ -1,0 +1,27 @@
+.miss__card-icons_type_like {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/like.svg") no-repeat center / cover;
+  cursor: pointer;
+}
+
+.miss__card-icons_type_like:hover {
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/like-hover.svg") no-repeat center / cover;
+}
+
+.miss__card-icons_type_basket {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/basket.svg") no-repeat center / cover;
+  cursor: pointer;
+}
+
+.miss__card-icons_type_basket:hover {
+  width: 20px;
+  height: 20px;
+  background: url("../../../images/basket-hover.svg") no-repeat center / cover;
+}

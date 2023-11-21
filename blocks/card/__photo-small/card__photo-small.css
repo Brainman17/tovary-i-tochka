@@ -1,0 +1,18 @@
+.card__photo-small {
+  display: none;
+}
+
+@media screen and (max-width: 690px) {
+  .card__photo-small {
+    display: inline-block;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+    padding: 2px 3px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
