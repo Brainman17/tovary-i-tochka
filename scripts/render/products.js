@@ -12,7 +12,7 @@ class Products {
       roundedPrice = Math.ceil(discountedPrice);
 
       productsList += `
-        <article class="card basket__card" >
+        <article data-card-tid=${object.id} class="card basket__card" >
          <div class="card__wrap">
               <div class="card__wrap_checkbox card__wrap_position_relative">
                 <div class="card__wrap_checkbox-input">
@@ -29,7 +29,7 @@ class Products {
               <div class="card__wrap_description">
                 <div class="card__wrap_price-small">
                   <p class="card__price">
-                      ${totalPrice}
+                  <span class="card__price-value">${roundedPrice}</span>
                     <span class="card__currency">сом</span>
                   </p>
                   <p class="card__sub-price"><span class="card__sub-number">${totalPrice}</span> сом</p>
@@ -115,5 +115,4 @@ class Products {
 }
 
 const productsPage = new Products();
-
 productsPage.render();

@@ -75,5 +75,3 @@ const DELIVERY_OPTIONS = {
     },
   ],
 };
-
-const PERCENT = 15;
