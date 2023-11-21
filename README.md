@@ -2,7 +2,7 @@
 
 <h4 style="color: #1E90FF">Deploy</h4>
 
-`Vercel` https://tochka-i-tovary.vercel.app/
+`Vercel` https://tochka-sandy.vercel.app/
 
 ### 🔹 Стек проекта
 
