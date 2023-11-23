@@ -1,6 +1,5 @@
 .input__group {
   position: relative;
-  /* width: 100%; */
 }
 
 .input__group input {
@@ -25,4 +24,10 @@
   left: 10px;
   font-size: 13px;
   line-height: 16px;
+}
+
+@media screen and (max-width: 690px) {
+  .input__group {
+    margin-bottom: 24px;
+  }
 }

@@ -1,0 +1,18 @@
+.popup__btn-choose {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  background-color: #cb11ab;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  width: 164px;
+  margin-top: 140px;
+}
+
+.popup__btn-choose:hover {
+  opacity: 0.89;
+}

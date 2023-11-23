@@ -5,13 +5,13 @@ class Payment {
     paymentHTML += `
         <div class="method__wrap">
         <h2 class="method__title">Способ оплаты</h2>
-        <button class="method__btn-change">Изменить</button>
+        <button class="method__btn-change button__change-payment">Изменить</button>
         </div>
         <div class="method__wrap_payment">
             <img
-            src="./images/bank-card.svg"
+            src="./images/mir.svg"
             alt="bank-card"
-            class="payment__card-image"
+            class="payment__card-image card-method"
             />
             <span class="payment__card-number payment__card-number_big"
             >1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234</span

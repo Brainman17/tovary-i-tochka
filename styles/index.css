@@ -113,6 +113,7 @@
 @import url("../blocks/payment/__caption/payment__caption.css");
 @import url("../blocks/payment/__wrap/payment__wrap.css");
 @import url("../blocks/payment/__label/payment__label.css");
+@import url("../blocks/payment/__pencil/payment__pencil.css");
 @import url("../blocks/payment/__checkbox/payment__checkbox.css");
 @import url("../blocks/payment/__checkbox/_caption/payment__checkbox_caption.css");
 
@@ -166,11 +167,31 @@
 @import url("../blocks/popup/__info-title/popup__info-title.css");
 @import url("../blocks/popup/__info-caption/popup__info-caption.css");
 @import url("../blocks/popup/__stock/popup__stock.css");
+@import url("../blocks/popup/__payment/popup__payment.css");
+@import url("../blocks/popup/__title-container/popup__title-container.css");
+@import url("../blocks/popup/__title/popup__title.css");
+@import url("../blocks/popup/__cross/popup__cross.css");
+@import url("../blocks/popup/__payment-container/popup__payment-container.css");
 @import url("../blocks/popup/__stock-caption/popup__stock-caption.css");
 @import url("../blocks/popup/__count/popup__count.css");
 @import url("../blocks/popup/__count-container/popup__count-container.css");
 @import url("../blocks/popup/__count-percent/popup__count-percent.css");
 @import url("../blocks/popup/__count-value/popup__count-value.css");
+@import url("../blocks/popup/__btn-choose/popup__btn-choose.css");
+@import url("../blocks/popup/__btn-choose/popup__btn-choose.css");
+@import url("../blocks/popup/__delivery-button/popup__delivery-button.css");
+@import url("../blocks/popup/__button-wrap/popup__button-wrap.css");
+@import url("../blocks/popup/__delivery/popup__delivery.css");
+@import url("../blocks/popup/__delivery-container/popup__delivery-container.css");
+@import url("../blocks/popup/__subtitle/popup__subtitle.css");
+@import url("../blocks/popup/__adress-wrap/popup__adress-wrap.css");
+@import url("../blocks/popup/__star/popup__star.css");
+@import url("../blocks/popup/__rating/popup__rating.css");
+@import url("../blocks/popup/__caption/popup__caption.css");
+@import url("../blocks/popup/__adress/popup__adress.css");
+@import url("../blocks/popup/__cart/popup__cart.css");
+@import url("../blocks/popup/__rating-wrap/popup__rating-wrap.css");
+@import url("../blocks/popup/__courier-wrap/popup__courier-wrap.css");
 
 /* error */
 @import url("../blocks/error/error.css");

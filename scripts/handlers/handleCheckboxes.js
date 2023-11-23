@@ -1,5 +1,20 @@
 const basket = document.querySelector(".basket");
 const checkboxes = basket.querySelectorAll("input[type = 'checkbox']");
+const paymentCheckbox = document.querySelector(".payment__checkbox");
+const paymentCheckboxCaption = document.querySelector(".payment__caption");
+const orderBtn = document.querySelector(".result__btn");
+const totalSum = document.querySelector(".result__sum");
+// const totalSum = document.querySelector("#option-all");
+
+paymentCheckbox.addEventListener("change", (event) => {
+  if (event.target.checked) {
+    orderBtn.textContent = "Оплатить " + totalSum.textContent;
+    paymentCheckboxCaption.style.display = "none";
+  } else {
+    orderBtn.textContent = "Заказать";
+    paymentCheckboxCaption.style.display = "block";
+  }
+});
 
 const checkAll = (myCheckbox) => {
   if (myCheckbox.checked === true) {

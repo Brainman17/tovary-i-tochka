@@ -1,8 +1,18 @@
 const counterRestList = document.querySelectorAll(".counter__rest-value");
 const cardPriceList = document.querySelectorAll(".card__price-value");
-const cardDiscoundPriceList = document.querySelectorAll(".card__sub-number");
+const cardDiscountedPriceList = document.querySelectorAll(".card__sub-number");
 const cardChoiseList = document.querySelectorAll(".card__choise");
 const cardSmallSizeList = document.querySelectorAll(".card__photo-small");
+const counterValueList = document.querySelectorAll(".counter__value");
+const photosForDeliveryList = document.querySelectorAll(".method__wrap_photo");
+
+counterValueList.forEach((count) => {
+  if (count.textContent === "2") {
+    count.nextElementSibling.disabled = true;
+  } else if (count.textContent === "1") {
+    count.previousElementSibling.disabled = true;
+  }
+});
 
 counterRestList.forEach((rest) => {
   if (rest.textContent > 2) {
@@ -26,7 +36,8 @@ cardPriceList.forEach((price) => {
   price.textContent = numberString;
 });
 
-cardDiscoundPriceList.forEach((discoundPrice) => {
+// Если количество товаров на доставку - 1, то убрать span
+cardDiscountedPriceList.forEach((discoundPrice) => {
   let numberString = discoundPrice.textContent.toString();
 
   if (numberString.length > 4) {
@@ -37,17 +48,26 @@ cardDiscoundPriceList.forEach((discoundPrice) => {
   discoundPrice.textContent = numberString;
 });
 
+// Если количество товаров на доставку - 1, то убрать span
 cardChoiseList.forEach((choise) => {
   if (choise.textContent === "null") {
     choise.remove();
   }
 });
 
+// Если количество товаров на доставку - 1, то убрать span
 cardSmallSizeList.forEach((size) => {
   if (size.textContent !== "null") {
     let numberSize = size.textContent.slice(8);
     size.textContent = numberSize;
   } else {
     size.remove();
+  }
+});
+
+// Если количество товаров на доставку - 1, то убрать span
+photosForDeliveryList.forEach((photo) => {
+  if (photo.lastElementChild.textContent === "1") {
+    photo.lastElementChild.remove();
   }
 });

@@ -57,7 +57,7 @@ const DELIVERY_OPTIONS = {
   productsForDeliveryFirstPart: [
     {
       photoImage: "./images/photo_1.jpg",
-      numberOfGoods: 0,
+      numberOfGoods: 1,
     },
     {
       photoImage: "./images/photo_2.jpg",

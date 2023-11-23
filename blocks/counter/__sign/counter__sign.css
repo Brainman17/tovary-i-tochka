@@ -7,6 +7,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+}
+
+.counter__sign:disabled {
+  cursor: default;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 690px) {

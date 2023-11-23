@@ -43,14 +43,14 @@ class Result {
     <div class="result__wrap">
     <div>
       <h3 class="result__title">Итого</h3>
-      <p class="result__caption">${totalGoods} товара</p>
+      <p class="result__caption"><span class="result__goods">${totalGoods}</span> товара</p>
       <p class="result__caption">Скидка</p>
       <p class="result__caption">Доставка</p>
     </div>
     <div>
-      <p class="result__sum">${totalDiscountedPrice} сом</p>
-      <p class="result__caption result__caption_right">${totalPrice} сом</p>
-      <p class="result__caption result__caption_right">−${totalDiscount} сом</p>
+      <p class="result__sum"><span class="result__sale-sum">${totalDiscountedPrice}</span> сом</p>
+      <p class="result__caption result__caption_right"><span class="result__total-sum">${totalPrice}</span> сом</p>
+      <p class="result__caption result__caption_right"><span class="result__discount">−${totalDiscount}</span> сом</p>
       <p class="result__caption result__caption_right">Бесплатно</p>
     </div>
     </div>
@@ -83,14 +83,14 @@ class Result {
         <img
           src="./images/pencil.svg"
           alt="pencil"
-          class="delivery__pencil"
+          class="payment__pencil"
         />
       </div>
       <div class="payment__wrap">
         <img
-          src="./images/bank-card.svg"
+          src="./images/mir.svg"
           alt="bank-card"
-          class="payment__card-image"
+          class="payment__card-image card-result"
         />
         <span class="payment__card-number"
           >1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234</span

@@ -8,8 +8,9 @@
 
 @media screen and (max-width: 690px) {
   .miss__wrap_icons {
+    width: 64px;
     position: absolute;
-    right: 2px;
+    right: 0;
     top: 120px;
     margin-right: 0;
   }

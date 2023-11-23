@@ -1,0 +1,9 @@
+.popup__courier-wrap {
+  display: flex;
+  margin-right: auto;
+  width: 400px;
+}
+
+.adress-for-courier {
+  margin-left: 8px;
+}

@@ -1,0 +1,36 @@
+.popup__payment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 13px;
+}
+
+.popup__payment-container label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.popup__payment-container label span {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.popup__payment-container label img {
+  border-radius: 4px;
+  background-color: #f6f6fa;
+  padding: 4px 4px;
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+.mir {
+  padding: 6px 2px !important;
+}
+
+.visa {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

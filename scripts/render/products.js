@@ -8,6 +8,9 @@ class Products {
     PRODUCT.forEach((object) => {
       totalPrice = object.count * object.unitPrice;
 
+      const isShowRestCount =
+        object.count === 2 || object.count === 1 ? 2 : 200;
+
       const discountedPrice = totalPrice - (totalPrice * object.discount) / 100;
       roundedPrice = Math.ceil(discountedPrice);
 
@@ -53,27 +56,20 @@ class Products {
               <div class="card__wrap_counter">
                 <div class="counter">
                   <div class="counter__wrap">
-                    <div class="counter__sign counter__sign_decrement">
+                    <button class="counter__sign counter__sign_decrement">
                       &#8722;
-                    </div>
+                    </button>
                     <div class="counter__value">${object.count}</div>
-                    <div class="counter__sign counter__sign_increment">
+                    <button class="counter__sign counter__sign_increment">
                       &#43;
-                    </div>
+                    </button>
                   </div>
-                  <span class="counter__rest">Осталось <span class="counter__rest-value">${object.count}</span> шт.</span>
+                  <span class="counter__rest">Осталось <span class="counter__rest-value">${isShowRestCount}</span> шт.</span>
                 </div>
                 <div class="card__wrap_icons card__icons_position_absolute">
                   <div class="card__icons card__icons_like"></div>
                   <div class="card__icons card__icons_basket"></div>
                 </div>
-              </div>
-              <div class="card__wrap_price">
-                <p class="card__price ">
-                <span class="card__price-value">${roundedPrice}</span> 
-                  <span class="card__currency">сом</span>
-                </p>
-                <p class="card__sub-price"><span class="card__sub-number">${totalPrice}</span> сом</p>
               </div>
             </div>
           </article> 
@@ -90,7 +86,6 @@ class Products {
                  />
                 <span class="card__photo-small">${object.sizeDescription}</span>
             </div>
-            
             <div class="miss__wrap_description">
                 <h3 class="miss__subtitle miss__grayscale">
                 ${object.title}

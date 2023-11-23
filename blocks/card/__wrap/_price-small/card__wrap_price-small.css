@@ -1,9 +1,12 @@
 .card__wrap_price-small {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 @media screen and (max-width: 690px) {
   .card__wrap_price-small {
+    position: static;
     display: flex;
   }
 }

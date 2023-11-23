@@ -1,0 +1,12 @@
+.popup__cross {
+  all: unset;
+  background: transparent url("../../../images/cross-btn.svg") no-repeat center /
+    cover;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.popup__cross:hover {
+  opacity: 0.65;
+}
