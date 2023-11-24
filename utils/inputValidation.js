@@ -70,15 +70,14 @@ inputSurname.addEventListener("keypress", () => {
   }
 });
 
-inputPhone.addEventListener("blur", (e) => {
+inputPhone.addEventListener("blur", (event) => {
   if (!validatePhoneNumber(inputPhone.value)) {
     inputPhone.classList.add("error__color");
     errorPhone.textContent = "Формат: +9 999 999 99 99";
   }
 });
 
-inputPhone.addEventListener("keyup", (event) => {
-  console.log(validatePhoneNumber(inputPhone.value));
+inputPhone.addEventListener("keyup", () => {
   if (validatePhoneNumber(inputPhone.value)) {
     inputPhone.classList.remove("error__color");
     errorPhone.textContent = "";

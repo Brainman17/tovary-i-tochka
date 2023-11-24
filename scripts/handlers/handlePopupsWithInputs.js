@@ -5,6 +5,7 @@ const paymentCardInResult = document.querySelector(".card-result");
 const paymentCardInMethod = document.querySelector(".card-method");
 const paymentSelectionButton = document.querySelector(".popup__btn-payment");
 const paymentForm = document.querySelector("#payment-form");
+const deliveryForm = document.querySelector("#delivery-form");
 const paymentPencil = document.querySelector(".payment__pencil");
 const paymentChangeButton = document.querySelector(".button__change-payment");
 const deliveryPencil = document.querySelector(".delivery__pencil");
@@ -55,6 +56,10 @@ paymentSelectionButton.addEventListener("click", () => {
 });
 
 // Попап доставки
+deliveryForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+});
+
 deliveryPencil.addEventListener("click", () => {
   overlay.style.display = "flex";
   deliveryPopup.style.display = "block";

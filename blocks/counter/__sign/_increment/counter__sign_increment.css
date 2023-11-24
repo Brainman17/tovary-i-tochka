@@ -2,3 +2,7 @@
   right: 0;
   padding-right: 12px;
 }
+
+.counter__sign_increment:disabled {
+  color: rgba(0, 0, 0, 0.2);
+}

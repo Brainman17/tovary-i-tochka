@@ -28,6 +28,41 @@
   background: url("../../../images/basket-hover.svg") no-repeat center / cover;
 }
 
+.card__icons_like-fill {
+  background: url("../../../images/like-fill.svg") no-repeat center / cover;
+  display: inline-block;
+  object-fit: cover;
+  width: 20px;
+  height: 18px;
+  margin-left: 13px;
+}
+
+.card__icons_miss-like-fill {
+  background: url("../../../images/like-fill.svg") no-repeat center / cover;
+  display: inline-block;
+  object-fit: cover;
+  width: 19px;
+  height: 17px;
+}
+
+.card__icons_miss-like-fill {
+  background: url("../../../images/like-fill.svg") no-repeat center / cover;
+  display: inline-block;
+  object-fit: cover;
+  width: 19px;
+  height: 17px;
+}
+
+.card__icons_like-fill:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.card__icons_miss-like-fill:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 690px) {
   .card__icons_basket {
     margin-left: 22px;

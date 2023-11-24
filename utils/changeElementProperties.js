@@ -7,23 +7,7 @@ const counterValueList = document.querySelectorAll(".counter__value");
 const photosForDeliveryList = document.querySelectorAll(".method__wrap_photo");
 const counterWrap = document.querySelectorAll(".counter__wrap");
 
-counterWrap.forEach((countElement) => {
-  const count = countElement.querySelector(".counter__value");
-  const minus = countElement.querySelector(".counter__sign_decrement");
-  const plus = countElement.querySelector(".counter__sign_increment");
-
-  const disableButton = () => {
-    if (count.textContent <= "1") {
-      minus.disabled = true;
-    } else {
-      minus.disabled = false;
-    }
-  };
-
-  disableButton();
-  countElement.addEventListener("change", disableButton);
-});
-
+// Добавляем надпись "Осталось 2 шт"
 counterRestList.forEach((rest) => {
   if (rest.textContent > 2) {
     rest.parentElement.remove();

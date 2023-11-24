@@ -6,7 +6,18 @@ const totalSaleElement = document.querySelector(".result__discount");
 const saleCostList = [...document.querySelectorAll(".card__price-value")];
 const costList = [...document.querySelectorAll(".card__sub-number")];
 
-// const plusButton = document.querySelectorAll(".counter__sign_increment");
+const handleDisableButtons = (currentCount, minusButton, plusButton, rest) => {
+  currentCount <= 1
+    ? (minusButton.disabled = true)
+    : (minusButton.disabled = false);
+
+  if (rest && currentCount === 2) {
+    console.log(currentCount);
+    plusButton.disabled = true;
+  } else {
+    plusButton.disabled = false;
+  }
+};
 
 cardList.forEach((card) => {
   const quantityElement = card.querySelector(".counter__value");
@@ -14,18 +25,23 @@ cardList.forEach((card) => {
   const priceElement = card.querySelector(".card__sub-number");
   const plusButton = card.querySelector(".counter__sign_increment");
   const minusButton = card.querySelector(".counter__sign_decrement");
+  const restInscription = card.querySelector(".counter__rest");
 
   // Приводим к числу
   let discountedPrice = +salePriceElement.textContent.replaceAll(" ", "");
   let price = +priceElement.textContent.replaceAll(" ", "");
   let quantity = +quantityElement.textContent.replaceAll(" ", "");
 
+  handleDisableButtons(quantity, minusButton, plusButton, restInscription);
+
   // Узнаем процент разницы и цену за единицу товара
   const unitPrice = price / quantity;
   const percent = ((price - discountedPrice) / price) * 100;
 
-  plusButton.addEventListener("click", () => {
+  plusButton.addEventListener("click", function () {
     quantity += 1;
+
+    handleDisableButtons(quantity, minusButton, this, restInscription);
 
     price = Math.ceil(unitPrice * quantity);
     discountedPrice = Math.ceil(price - (percent / 100) * price);
@@ -37,10 +53,18 @@ cardList.forEach((card) => {
     );
   });
 
-  minusButton.addEventListener("click", () => {
+  minusButton.addEventListener("click", function () {
     quantity -= 1;
     price = Math.ceil(unitPrice * quantity);
     discountedPrice = Math.ceil(price - (percent / 100) * price);
+
+    handleDisableButtons(quantity, this, plusButton, restInscription);
+
+    if (quantity <= 1) {
+      this.disabled = true;
+    } else {
+      this.disabled = false;
+    }
 
     quantityElement.textContent = quantity;
     priceElement.textContent = new Intl.NumberFormat("ru-RU").format(price);
