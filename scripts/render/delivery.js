@@ -5,13 +5,13 @@ class Delivery {
     let productsAdress = "";
 
     productsAdress += `
-      <p class="method__value-subtitle">
+      <p class="method__value-subtitle method__adress">
           ${DELIVERY_OPTIONS.pickupPoint[0].adress}
       </p>
       <div class="method__wrap_delivery">
           <img src="./images/star.svg" alt="star" class="method__icon" />
-          <span class="method__caption">${DELIVERY_OPTIONS.pickupPoint[0].rating}</span>
-        <p class="method__caption">Ежедневно с 10 до 21</p>
+          <span class="method__caption method__rating">${DELIVERY_OPTIONS.pickupPoint[0].rating}</span>
+        <p class="method__caption method__date">Ежедневно с 10 до 21</p>
       </div> `;
 
     DELIVERY_OPTIONS.productsForDeliveryFirstPart.forEach(

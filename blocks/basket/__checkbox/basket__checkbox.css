@@ -14,8 +14,6 @@
   display: inline-block;
   width: 22px;
   height: 22px;
-  flex-shrink: 0;
-  flex-grow: 0;
   border-radius: 0.25em;
   margin-right: 0.5em;
   background-image: url("../../../images/checkbox-unsuccess.svg");
@@ -26,4 +24,19 @@
 
 .basket__checkbox:checked + label::before {
   background-image: url("../../../images/checkbox-success.svg");
+}
+
+@media screen and (max-width: 690px) {
+  #option-all + label::before {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+  }
+
+  .basket__checkbox + label::before {
+    width: 21px;
+    height: 21px;
+    border-radius: 0.3em;
+    background-color: #fff;
+  }
 }

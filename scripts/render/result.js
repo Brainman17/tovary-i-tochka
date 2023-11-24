@@ -56,7 +56,7 @@ class Result {
     </div>
     <div class="delivery">
       <div class="result__wrap result__wrap_display_none">
-        <h4 class="result__subtitle">Доставка в пункт выдачи</h4>
+        <h4 class="result__subtitle result__delivery-title">Доставка в пункт выдачи</h4>
         <img
           src="./images/pencil.svg"
           alt="pencil"
@@ -64,7 +64,7 @@ class Result {
         />
       </div>
     </div>
-    <p class="delivery__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+    <p class="delivery__address result__delivery-adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
     <time class="delivery__date">5–8 фев</time>
     <div class="result__wrap delivery__note">
       <img

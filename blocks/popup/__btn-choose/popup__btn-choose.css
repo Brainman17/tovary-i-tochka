@@ -13,6 +13,12 @@
   margin-top: 140px;
 }
 
+@media screen and (max-width: 690px) {
+  .popup__btn-choose {
+    width: 100%;
+  }
+}
+
 .popup__btn-choose:hover {
   opacity: 0.89;
 }

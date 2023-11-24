@@ -1,11 +1,32 @@
 .basket__arrow {
-  object-fit: cover;
   width: 20px;
   height: 20px;
-  cursor: pointer;
+  background-image: url("../../../images/arrow-up.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
 }
 
 .basket__arrow:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.basket__arrow-down {
+  background-image: url("../../../images/arrow-down.svg");
+  display: none;
+}
+
+.basket__arrow-up {
+  background-image: url("../../../images/arrow-up.svg");
+}
+
+.basket__miss-arrow-up {
+  background-image: url("../../../images/arrow-up.svg");
+}
+
+.basket__miss-arrow-down {
+  display: none;
+  background-image: url("../../../images/arrow-down.svg");
 }

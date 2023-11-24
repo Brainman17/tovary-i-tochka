@@ -5,13 +5,23 @@ const cardChoiseList = document.querySelectorAll(".card__choise");
 const cardSmallSizeList = document.querySelectorAll(".card__photo-small");
 const counterValueList = document.querySelectorAll(".counter__value");
 const photosForDeliveryList = document.querySelectorAll(".method__wrap_photo");
+const counterWrap = document.querySelectorAll(".counter__wrap");
 
-counterValueList.forEach((count) => {
-  if (count.textContent === "2") {
-    count.nextElementSibling.disabled = true;
-  } else if (count.textContent === "1") {
-    count.previousElementSibling.disabled = true;
-  }
+counterWrap.forEach((countElement) => {
+  const count = countElement.querySelector(".counter__value");
+  const minus = countElement.querySelector(".counter__sign_decrement");
+  const plus = countElement.querySelector(".counter__sign_increment");
+
+  const disableButton = () => {
+    if (count.textContent <= "1") {
+      minus.disabled = true;
+    } else {
+      minus.disabled = false;
+    }
+  };
+
+  disableButton();
+  countElement.addEventListener("change", disableButton);
 });
 
 counterRestList.forEach((rest) => {
@@ -20,25 +30,22 @@ counterRestList.forEach((rest) => {
   }
 });
 
+// Если сумма больше 4 символов, разделяем на пробелы и уменьшаем число
 cardPriceList.forEach((price) => {
-  let numberString = price.textContent.toString();
+  let numberString = price.textContent;
 
-  // Если число больше 4 символов
   if (numberString.length > 4) {
-    // Вставляем пробел после первой цифры
     numberString = numberString.slice(0, 1) + " " + numberString.slice(1);
-    // Вставляем пробел после четвёртой цифры
     numberString = numberString.slice(0, 5) + " " + numberString.slice(5);
-    // Уменьшаем шрифт
     price.parentElement.classList.add("card__price_big");
   }
 
   price.textContent = numberString;
 });
 
-// Если количество товаров на доставку - 1, то убрать span
+// Если сумма скидки больше 4 символов, то только разделяем на пробелы
 cardDiscountedPriceList.forEach((discoundPrice) => {
-  let numberString = discoundPrice.textContent.toString();
+  let numberString = discoundPrice.textContent;
 
   if (numberString.length > 4) {
     numberString = numberString.slice(0, 1) + " " + numberString.slice(1);
@@ -48,14 +55,14 @@ cardDiscountedPriceList.forEach((discoundPrice) => {
   discoundPrice.textContent = numberString;
 });
 
-// Если количество товаров на доставку - 1, то убрать span
+// Если у товара нет размера и цвета, то удаляем элемент
 cardChoiseList.forEach((choise) => {
   if (choise.textContent === "null") {
     choise.remove();
   }
 });
 
-// Если количество товаров на доставку - 1, то убрать span
+// Переносим размер товара на маленьких разрешениях на карточку
 cardSmallSizeList.forEach((size) => {
   if (size.textContent !== "null") {
     let numberSize = size.textContent.slice(8);
@@ -65,7 +72,7 @@ cardSmallSizeList.forEach((size) => {
   }
 });
 
-// Если количество товаров на доставку - 1, то убрать span
+// Если у карточек количество товара равно 1, то убираем оранжевую плашку с числом
 photosForDeliveryList.forEach((photo) => {
   if (photo.lastElementChild.textContent === "1") {
     photo.lastElementChild.remove();

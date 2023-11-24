@@ -8,10 +8,13 @@
   margin: 5px 0 0;
   align-self: end;
   cursor: pointer;
+  position: absolute;
+  right: 0;
 }
 
 @media (max-width: 690px) {
   .card__sub-price {
+    position: static;
     margin-top: 0;
     margin-bottom: 2px;
     margin-left: 5px;

@@ -12,11 +12,13 @@
   border-radius: 16px;
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3),
     0px 2px 10px 0px rgba(0, 0, 0, 0.15);
-  display: block;
+  display: none;
 }
 
 @media screen and (max-width: 690px) {
   .popup__delivery {
-    width: 250px;
+    width: 280px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }

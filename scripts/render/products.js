@@ -43,13 +43,14 @@ class Products {
                   <p class="card__choise card__choise_description_size">${object.sizeDescription}</p>
                 </div>
                 <span class="card__caption">${object.stock}</span>
-                <span class="card__caption"
+                <div class="card__caption card_position_relative"
                   >${object.manufacturer}
                   <img
                     src="./images/info.svg"
                     alt="info"
                     class="card__info-icon"
-                /></span>
+                  />
+                </div>
               </div>
             </div> 
             <div class="card__wrap">

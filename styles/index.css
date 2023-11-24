@@ -28,6 +28,7 @@
 @import url("../blocks/input/__receiver/_tax-number/input__receiver_tax-number.css");
 @import url("../blocks/input/__group/input__group.css");
 @import url("../blocks/input/__span/input__span.css");
+@import url("../blocks/input/__delivery/input__delivery.css");
 
 /* basket */
 @import url("../blocks/basket/basket.css");
@@ -39,6 +40,10 @@
 @import url("../blocks/basket/__wrap/_checkbox/basket__wrap_checkbox.css");
 @import url("../blocks/basket/__wrap/_card/basket__wrap_card.css");
 @import url("../blocks/basket/__card/basket__card.css");
+@import url("../blocks/basket/__hidden-wrap/basket__hidden-wrap.css");
+@import url("../blocks/basket/__hidden-section/basket__hidden-section.css");
+@import url("../blocks/basket/__hidden-goods/basket__hidden-goods.css");
+@import url("../blocks/basket/__hidden-price/basket__hidden-price.css");
 
 /* card */
 @import url("../blocks/card/card.css");

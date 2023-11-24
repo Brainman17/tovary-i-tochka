@@ -18,7 +18,7 @@
           <div class="basket__wrap_checkbox">
             <input
               type="checkbox"
-              class="basket__checkbox"
+              class="basket__checkbox basket__checkbox-all"
               id="option-all"
               onchange="checkAll(this)"
             />
@@ -26,11 +26,14 @@
               Выбрать все</label
             >
           </div>
-          <img
-            src="./images/arrow-up.svg"
-            alt="arrow-up"
-            class="basket__arrow"
-          />
+          <div class="basket__hidden-section">
+            <p class="basket__hidden-wrap">
+              <span class="basket__hidden-goods"></span> товаров &middot;
+              <span class="basket__hidden-price"></span> сом
+            </p>
+          </div>
+          <button class="basket__arrow basket__arrow-up"></button>
+          <button class="basket__arrow basket__arrow-down"></button>
         </div>
         <div class="basket__wrap_card">
           <!-- Товары -->
@@ -40,11 +43,8 @@
             <h3 class="miss__title">
               Отсутствуют &middot; <span>3</span>&nbsp;товара
             </h3>
-            <img
-              src="./images/arrow-up.svg"
-              alt="arrow-up"
-              class="basket__arrow"
-            />
+            <button class="basket__arrow basket__miss-arrow-up"></button>
+            <button class="basket__arrow basket__miss-arrow-down"></button>
           </div>
           <div class="miss__card-wrap">
             <!-- Отсутствующие товары -->
@@ -58,7 +58,7 @@
             </button>
           </div>
           <div class="method__container">
-            <h3 class="method__subtitle">Пункт выдачи</h3>
+            <h3 class="method__subtitle method__pickup">Пункт выдачи</h3>
             <div class="method__wrap_adress">
               <!-- Адрес доставки -->
             </div>
@@ -103,6 +103,7 @@
     </div>
 
     <!-- Popups -->
+
     <section class="popup popup__info">
       <h3 class="popup__info-title">OOO &laquo;МЕГАПРОФСТИЛЬ&raquo;</h3>
       <p class="popup__info-caption">
@@ -136,22 +137,59 @@
       </div>
       <form id="payment-form" class="popup__payment-container">
         <label>
-          <input type="radio" name="card" value="mir" checked />
+          <div class="radio-input radio-input-payment">
+            <input
+              type="radio"
+              name="card"
+              value="mir"
+              checked
+              class="input__delivery"
+              id="option1"
+            />
+            <label for="option1"></label>
+          </div>
           <img src="./images/mir.svg" alt="mir" class="mir" />
           <span>1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234</span>
         </label>
         <label>
-          <input type="radio" name="card" value="visa" />
+          <div class="radio-input radio-input-payment">
+            <input
+              type="radio"
+              name="card"
+              value="visa"
+              class="input__delivery"
+              id="option2"
+            />
+            <label for="option2"></label>
+          </div>
           <img src="./images/visa.svg" class="visa" alt="visa" />
           <span>1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234</span>
         </label>
         <label>
-          <input type="radio" name="card" value="mastercard" />
+          <div class="radio-input radio-input-payment">
+            <input
+              type="radio"
+              name="card"
+              value="mastercard"
+              class="input__delivery"
+              id="option3"
+            />
+            <label for="option3"></label>
+          </div>
           <img src="./images/mastercard.svg" alt="mastercard" />
           <span>1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234</span>
         </label>
         <label>
-          <input type="radio" name="card" value="maestro" />
+          <div class="radio-input radio-input-payment">
+            <input
+              type="radio"
+              name="card"
+              value="maestro"
+              class="input__delivery"
+              id="option4"
+            />
+            <label for="option4"></label>
+          </div>
           <img src="./images/maestro.svg" alt="maestro" />
           <span>1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234</span>
         </label>
@@ -159,7 +197,7 @@
       </form>
     </section>
 
-    <section class="popup">
+    <section class="popup popup__delivery">
       <div class="popup__title-container">
         <h3 class="popup__title">Способ доставки</h3>
         <button class="popup__cross popup__cross-delivery"></button>
@@ -173,46 +211,61 @@
         </button>
       </div>
       <h4 class="popup__subtitle">Мои адреса</h4>
-      <form id="delivery-form-pickup" class="popup__delivery-container">
+      <form id="delivery-form" class="popup__delivery-container">
         <div class="pickup">
           <label>
-            <input type="radio" name="adress" value="adress1" checked />
+            <div class="radio-input">
+              <input
+                type="radio"
+                name="adress"
+                value="adress-pickup"
+                checked
+                id="option5"
+              />
+              <label for="option5"></label>
+            </div>
             <div class="popup__adress-wrap">
               <p class="popup__adress">
                 г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
               </p>
               <div class="popup__rating-wrap">
                 <img src="./images/star.svg" alt="rating" class="popup__star" />
-                <span class="popup__rating">4.99</span>
+                <span class="popup__rating">4.98</span>
                 <span class="popup__caption">Пункт выдачи</span>
               </div>
             </div>
-            <img
-              src="./images/delivery-cart.svg"
-              alt="cart"
-              class="popup__cart"
-            />
+            <button class="popup__cart"></button>
           </label>
           <label>
-            <input type="radio" name="adress" value="adress2" checked />
+            <div class="radio-input">
+              <input
+                type="radio"
+                name="adress"
+                value="adress-pickup"
+                id="option6"
+              />
+              <label for="option6"></label>
+            </div>
             <div class="popup__adress-wrap">
-              <p class="popup__adress">
-                г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
-              </p>
+              <p class="popup__adress">г. Бишкек, ул. Чокморова, 185</p>
               <div class="popup__rating-wrap">
                 <img src="./images/star.svg" alt="rating" class="popup__star" />
-                <span class="popup__rating">4.99</span>
+                <span class="popup__rating">4.97</span>
                 <span class="popup__caption">Пункт выдачи</span>
               </div>
             </div>
-            <img
-              src="./images/delivery-cart.svg"
-              alt="cart"
-              class="popup__cart"
-            />
+            <button class="popup__cart"></button>
           </label>
           <label>
-            <input type="radio" name="adress" value="adress3" checked />
+            <div class="radio-input">
+              <input
+                type="radio"
+                name="adress"
+                value="adress-pickup"
+                id="option7"
+              />
+              <label for="option7"></label>
+            </div>
             <div class="popup__adress-wrap">
               <p class="popup__adress">г. Бишкек, улица Табышалиева, д. 57</p>
               <div class="popup__rating-wrap">
@@ -221,56 +274,67 @@
                 <span class="popup__caption">Пункт выдачи</span>
               </div>
             </div>
-            <img
-              src="./images/delivery-cart.svg"
-              alt="cart"
-              class="popup__cart"
-            />
+            <button class="popup__cart"></button>
           </label>
         </div>
         <div class="courier visibility">
           <label>
             <div class="popup__courier-wrap">
-              <input type="radio" name="adress" value="adress1" checked />
+              <div class="radio-input">
+                <input
+                  class="input__delivery"
+                  type="radio"
+                  name="adress"
+                  value="adress-courier"
+                  id="option8"
+                />
+                <label for="option8"></label>
+              </div>
+
               <p class="popup__adress adress-for-courier">
-                Бишкек, улица Табышалиева, 57
+                Бишкек, ул. Элебаева, 15
               </p>
             </div>
-            <img
-              src="./images/delivery-cart.svg"
-              alt="cart"
-              class="popup__cart"
-            />
+            <button class="popup__cart"></button>
           </label>
           <label>
             <div class="popup__courier-wrap">
-              <input type="radio" name="adress" value="adress2" checked />
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  name="adress"
+                  value="adress-courier"
+                  class="input__delivery"
+                  id="option9"
+                />
+                <label for="option9"></label>
+              </div>
               <p class="popup__adress adress-for-courier">
-                г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
+                г. Бишкек, микрорайон Джал, улица Гагарина, 15
               </p>
             </div>
-            <img
-              src="./images/delivery-cart.svg"
-              alt="cart"
-              class="popup__cart"
-            />
+            <button class="popup__cart"></button>
           </label>
           <label>
             <div class="popup__courier-wrap">
-              <input type="radio" name="adress" value="adress3" checked />
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  name="adress"
+                  value="adress-courier"
+                  class="input__delivery"
+                  id="option10"
+                />
+                <label for="option10"></label>
+              </div>
               <p class="popup__adress adress-for-courier">
                 г. Бишкек, улица Табышалиева, д. 57
               </p>
             </div>
-            <img
-              src="./images/delivery-cart.svg"
-              alt="cart"
-              class="popup__cart"
-            />
+            <button class="popup__cart"></button>
           </label>
         </div>
       </form>
-      <form id="delivery-form-courier" class="popup__delivery-container"></form>
       <button class="popup__btn-choose popup__btn-delivery">Выбрать</button>
     </section>
 
@@ -284,11 +348,9 @@
     <script src="./scripts/render/products.js"></script>
     <script src="./scripts/render/result.js"></script>
     <script src="./scripts/render/header.js"></script>
-
     <script src="./scripts/render/payment.js"></script>
     <script src="./scripts/render/delivery.js"></script>
     <script src="./scripts/render/recipient.js"></script>
-
     <script src="./scripts/render/footer.js"></script>
 
     <!-- Utils -->
@@ -301,5 +363,6 @@
     <script src="./scripts/handlers/handleCounter.js"></script>
     <script src="./scripts/handlers/handlePopupsWithoutInputs.js"></script>
     <script src="./scripts/handlers/handlePopupsWithInputs.js"></script>
+    <script src="./scripts/handlers/handleVisibilityProducts.js"></script>
   </body>
 </html>

@@ -70,23 +70,38 @@ inputSurname.addEventListener("keypress", () => {
   }
 });
 
-inputEmail.addEventListener("blur", (e) => {
-  if (!validateEmail(inputEmail.value)) {
-    inputEmail.classList.add("error__color");
-    errorEmail.textContent = "Проверьте адрес электронной почты";
-  } else {
-    inputEmail.classList.remove("error__color");
-    errorEmail.textContent = "";
-  }
-});
-
 inputPhone.addEventListener("blur", (e) => {
   if (!validatePhoneNumber(inputPhone.value)) {
     inputPhone.classList.add("error__color");
     errorPhone.textContent = "Формат: +9 999 999 99 99";
-  } else {
+  }
+});
+
+inputPhone.addEventListener("keyup", (event) => {
+  console.log(validatePhoneNumber(inputPhone.value));
+  if (validatePhoneNumber(inputPhone.value)) {
     inputPhone.classList.remove("error__color");
     errorPhone.textContent = "";
+  }
+});
+
+inputPhone.addEventListener("keypress", (e) => {
+  if (!allowedKeys.includes(e.key)) {
+    e.preventDefault();
+  }
+});
+
+inputEmail.addEventListener("blur", () => {
+  if (!validateEmail(inputEmail.value)) {
+    inputEmail.classList.add("error__color");
+    errorEmail.textContent = "Проверьте адрес электронной почты";
+  }
+});
+
+inputEmail.addEventListener("keyup", (event) => {
+  if (validateEmail(inputEmail.value)) {
+    inputEmail.classList.remove("error__color");
+    errorEmail.textContent = "";
   }
 });
 
@@ -94,15 +109,21 @@ inputTax.addEventListener("blur", (e) => {
   if (!validateTaxNumber(inputTax.value)) {
     inputTax.classList.add("error__color");
     errorTax.textContent = "Проверьте ИНН";
-  } else {
-    inputTax.classList.remove("error__color");
-    errorTax.textContent = "";
   }
 });
 
-inputPhone.addEventListener("keypress", (e) => {
-  if (!allowedKeys.includes(e.key)) {
-    e.preventDefault();
+inputTax.addEventListener("input", (event) => {
+  const value = event.target.value;
+
+  if (value.length > 14) {
+    event.target.value = value.slice(0, 14);
+  }
+});
+
+inputTax.addEventListener("keyup", (e) => {
+  if (validateTaxNumber(inputTax.value)) {
+    inputTax.classList.remove("error__color");
+    errorTax.textContent = "";
   }
 });
 
