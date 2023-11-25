@@ -8,22 +8,29 @@ const infoPopup = document.querySelector(".popup__info");
 const signaturePopup = document.querySelector(".popup__stock");
 const discountedPopup = document.querySelector(".popup__count");
 
+// Показ попапа
+const handleShowPopup = (popup, coordinates) => {
+  const location = coordinates.getBoundingClientRect();
+
+  popup.style.display = "block";
+  popup.style.position = "absolute";
+  popup.style.top = location.top + window.scrollY + 25 + "px";
+  popup.style.left = location.right + window.scrollX - 150 + "px";
+};
+
+// Скрытие попапа
+const handleHidePopup = (popup) => {
+  popup.style.display = "none";
+};
+
 // Попап, если доставка бесплатная
 freeSignature.forEach((item) => {
   item.addEventListener("mouseenter", function () {
-    signaturePopup.style.display = "block";
-    const offsetTop = this.offsetTop;
-    const offsetLeft = this.offsetLeft;
-
-    signaturePopup.style.position = "absolute";
-    signaturePopup.style.left = offsetLeft - 120 + "px";
-    signaturePopup.style.top = offsetTop + 30 + "px";
+    handleShowPopup(signaturePopup, this);
   });
-});
 
-freeSignature.forEach((item) => {
   item.addEventListener("mouseleave", () => {
-    signaturePopup.style.display = "none";
+    handleHidePopup(signaturePopup);
   });
 });
 
@@ -32,7 +39,6 @@ cardCaptionList.forEach((wrapCaption) => {
   const icon = wrapCaption.querySelector(".card__info-icon");
 
   icon.addEventListener("mouseover", function () {
-    const coordinates = icon.getBoundingClientRect();
     if (this.parentElement.textContent.includes("Мегапрофстиль")) {
       infoPopup.firstElementChild.textContent = "OOO «МЕГАПРОФСТИЛЬ»";
       infoPopup.lastElementChild.textContent =
@@ -43,44 +49,24 @@ cardCaptionList.forEach((wrapCaption) => {
         " 142181, Московская обл, г.о. Подольск, д Коледино, тер. Индустриальный парк Коледино, д. 6, стр. 1";
     }
 
-    infoPopup.style.display = "block";
-    infoPopup.style.position = "absolute";
-    infoPopup.style.top = coordinates.top + window.scrollY + 25 + "px";
-    infoPopup.style.left = coordinates.right + window.scrollX - 150 + "px";
+    handleShowPopup(infoPopup, this);
   });
 
   icon.addEventListener("mouseout", () => {
-    infoPopup.style.display = "none";
+    handleHidePopup(infoPopup);
   });
-}); // Попап, показывающий сумму скидки и сумму процента разницы
+});
 
-priceList.forEach((wrap) => {
-  const salePrice = wrap.querySelector(".card__price-value");
-  const price = wrap.querySelector(".card__sub-number");
-
+// Попап, показывающий сумму скидки и сумму процента разницы
+const showPopupSale = (sale, percent, price) => {
   price.addEventListener("mouseover", function () {
-    const salePriceNumber = +salePrice.textContent.replaceAll(" ", "");
-    const priceNumber = +price.textContent.replaceAll(" ", "");
+    priceValue.textContent = -sale;
+    percentValue.textContent = Math.ceil(percent);
 
-    const percent = Math.ceil(
-      ((priceNumber - salePriceNumber) / priceNumber) * 100
-    );
-    const numberDifference = new Intl.NumberFormat("ru-RU").format(
-      salePriceNumber - priceNumber
-    );
-
-    const coordinates = this.getBoundingClientRect();
-
-    priceValue.textContent = numberDifference;
-    percentValue.textContent = percent;
-
-    discountedPopup.style.display = "block";
-    discountedPopup.style.position = "absolute";
-    discountedPopup.style.top = coordinates.top + window.scrollY + 25 + "px";
-    discountedPopup.style.left = coordinates.left + window.scrollX - 30 + "px";
+    handleShowPopup(discountedPopup, this);
   });
 
   price.addEventListener("mouseout", () => {
-    discountedPopup.style.display = "none";
+    handleHidePopup(discountedPopup);
   });
-});
+};

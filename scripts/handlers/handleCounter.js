@@ -30,20 +30,22 @@ cardList.forEach((card) => {
   let discountedPrice = +salePriceElement.textContent.replaceAll(" ", "");
   let price = +priceElement.textContent.replaceAll(" ", "");
   let quantity = +quantityElement.textContent.replaceAll(" ", "");
+  const priceDifference = price - discountedPrice;
 
   handleDisableButtons(quantity, minusButton, plusButton, restInscription);
 
   // Узнаем процент разницы и цену за единицу товара
   const unitPrice = price / quantity;
   const percent = ((price - discountedPrice) / price) * 100;
+  showPopupSale(priceDifference, percent, priceElement);
 
   plusButton.addEventListener("click", function () {
     quantity += 1;
-
-    handleDisableButtons(quantity, minusButton, this, restInscription);
-
     price = Math.ceil(unitPrice * quantity);
     discountedPrice = Math.ceil(price - (percent / 100) * price);
+    const priceDifference = price - discountedPrice;
+
+    handleDisableButtons(quantity, minusButton, this, restInscription);
 
     quantityElement.textContent = quantity;
     priceElement.textContent = new Intl.NumberFormat("ru-RU").format(price);
@@ -58,12 +60,14 @@ cardList.forEach((card) => {
       +card.dataset["cost"] - +card.dataset["salecost"]
     );
     getTotalCartCost();
+    showPopupSale(priceDifference, percent, priceElement);
   });
 
   minusButton.addEventListener("click", function () {
     quantity -= 1;
     price = Math.ceil(unitPrice * quantity);
     discountedPrice = Math.ceil(price - (percent / 100) * price);
+    const priceDifference = price - discountedPrice;
 
     handleDisableButtons(quantity, this, plusButton, restInscription);
 
@@ -80,5 +84,6 @@ cardList.forEach((card) => {
       +card.dataset["cost"] - +card.dataset["salecost"]
     );
     getTotalCartCost();
+    showPopupSale(priceDifference, percent, priceElement);
   });
 });

@@ -8,7 +8,7 @@ class Products {
     PRODUCT.forEach((object) => {
       totalPrice = object.count * object.unitPrice;
 
-      const isShowRestCount =
+      const isShowRestInscription =
         object.count === 2 || object.count === 1 ? 2 : 200;
 
       const discountedPrice = totalPrice - (totalPrice * object.discount) / 100;
@@ -79,7 +79,7 @@ class Products {
                       &#43;
                     </button>
                   </div>
-                  <span class="counter__rest">Осталось <span class="counter__rest-value">${isShowRestCount}</span> шт.</span>
+                  <span class="counter__rest">Осталось <span class="counter__rest-value">${isShowRestInscription}</span> шт.</span>
                 </div>
                 <div class="card__wrap_icons card__icons_position_absolute">
                   <div class="card__icons card__icons_like"></div>
