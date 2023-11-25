@@ -1,8 +1,7 @@
 const infoIconList = document.querySelectorAll(".card__info-icon");
 const freeSignature = document.querySelectorAll(".delivery__caption_span");
-const discountedPrice = document.querySelectorAll(".card__sub-price");
-const priceList = document.querySelectorAll(".card__sub-number");
 const cardCaptionList = document.querySelectorAll(".card_position_relative");
+const priceList = document.querySelectorAll(".card__wrap_price-small");
 const priceValue = document.querySelector(".popup__price-value");
 const percentValue = document.querySelector(".popup__percent-value");
 const infoPopup = document.querySelector(".popup__info");
@@ -53,26 +52,24 @@ cardCaptionList.forEach((wrapCaption) => {
   icon.addEventListener("mouseout", () => {
     infoPopup.style.display = "none";
   });
-});
+}); // Попап, показывающий сумму скидки и сумму процента разницы
 
-// Попап, показывающий сумму скидки и сумму процента разницы
-priceList.forEach((element) => {
-  element.addEventListener("mouseover", function () {
-    const price = +this.textContent.replaceAll(" ", "");
+priceList.forEach((wrap) => {
+  const salePrice = wrap.querySelector(".card__price-value");
+  const price = wrap.querySelector(".card__sub-number");
 
-    const parentElement = this.parentElement.parentNode;
-    const discountedPrice = parentElement.firstElementChild.firstElementChild;
-    const discountedPriceNumber = +discountedPrice.textContent.replaceAll(
-      " ",
-      ""
+  price.addEventListener("mouseover", function () {
+    const salePriceNumber = +salePrice.textContent.replaceAll(" ", "");
+    const priceNumber = +price.textContent.replaceAll(" ", "");
+
+    const percent = Math.ceil(
+      ((priceNumber - salePriceNumber) / priceNumber) * 100
     );
-
-    const percent = Math.ceil(((price - discountedPriceNumber) / price) * 100);
-
     const numberDifference = new Intl.NumberFormat("ru-RU").format(
-      discountedPriceNumber - price
+      salePriceNumber - priceNumber
     );
-    const coordinates = element.getBoundingClientRect();
+
+    const coordinates = this.getBoundingClientRect();
 
     priceValue.textContent = numberDifference;
     percentValue.textContent = percent;
@@ -83,7 +80,7 @@ priceList.forEach((element) => {
     discountedPopup.style.left = coordinates.left + window.scrollX - 30 + "px";
   });
 
-  element.addEventListener("mouseout", () => {
+  price.addEventListener("mouseout", () => {
     discountedPopup.style.display = "none";
   });
 });

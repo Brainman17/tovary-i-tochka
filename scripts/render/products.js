@@ -15,12 +15,22 @@ class Products {
       roundedPrice = Math.ceil(discountedPrice);
 
       productsList += `
-        <article data-card-tid=${object.id} class="card basket__card" >
+        <article data-card-tid=${object.id} data-price=${
+        object.unitPrice
+      } data-salecost=${roundedPrice} data-sale=${Math.abs(
+        roundedPrice - totalPrice
+      )} data-count=${
+        object.count
+      }  data-cost=${totalPrice}  class="card basket__card" >
          <div class="card__wrap">
               <div class="card__wrap_checkbox card__wrap_position_relative">
                 <div class="card__wrap_checkbox-input">
-                  <input type="checkbox" class="basket__checkbox" id="option-${object.id}" />
-                  <label class="basket__checkbox_label" for="option-${object.id}"> </label>
+                  <input type="checkbox" checked class="basket__checkbox" id="option-${
+                    object.id
+                  }" />
+                  <label class="basket__checkbox_label" for="option-${
+                    object.id
+                  }"> </label>
                 </div>
                 <img
                   src=${object.image}
@@ -39,8 +49,12 @@ class Products {
                 </div>
                 <h3 class="card__title">${object.title}</h3>
                 <div class="card__wrap_choise">
-                  <p class="card__choise card__choise_description_color">${object.colorDescription}</p>
-                  <p class="card__choise card__choise_description_size">${object.sizeDescription}</p>
+                  <p class="card__choise card__choise_description_color">${
+                    object.colorDescription
+                  }</p>
+                  <p class="card__choise card__choise_description_size">${
+                    object.sizeDescription
+                  }</p>
                 </div>
                 <span class="card__caption">${object.stock}</span>
                 <div class="card__caption card_position_relative"

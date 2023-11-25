@@ -8,6 +8,14 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .delivery__note {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 690px) {
   .delivery__note {
     background-color: #f0ecf4;

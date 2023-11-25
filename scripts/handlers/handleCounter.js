@@ -12,7 +12,6 @@ const handleDisableButtons = (currentCount, minusButton, plusButton, rest) => {
     : (minusButton.disabled = false);
 
   if (rest && currentCount === 2) {
-    console.log(currentCount);
     plusButton.disabled = true;
   } else {
     plusButton.disabled = false;
@@ -51,6 +50,14 @@ cardList.forEach((card) => {
     salePriceElement.textContent = new Intl.NumberFormat("ru-RU").format(
       discountedPrice
     );
+
+    card.dataset["count"] = +card.dataset["count"] + 1;
+    card.dataset["cost"] = Math.ceil(price);
+    card.dataset["salecost"] = Math.ceil(discountedPrice);
+    card.dataset["sale"] = Math.ceil(
+      +card.dataset["cost"] - +card.dataset["salecost"]
+    );
+    getTotalCartCost();
   });
 
   minusButton.addEventListener("click", function () {
@@ -60,16 +67,18 @@ cardList.forEach((card) => {
 
     handleDisableButtons(quantity, this, plusButton, restInscription);
 
-    if (quantity <= 1) {
-      this.disabled = true;
-    } else {
-      this.disabled = false;
-    }
-
     quantityElement.textContent = quantity;
     priceElement.textContent = new Intl.NumberFormat("ru-RU").format(price);
     salePriceElement.textContent = new Intl.NumberFormat("ru-RU").format(
       discountedPrice
     );
+
+    card.dataset["count"] = Math.ceil(+card.dataset["count"] - 1);
+    card.dataset["cost"] = Math.ceil(+card.dataset["cost"] - unitPrice);
+    card.dataset["salecost"] = Math.ceil(discountedPrice);
+    card.dataset["sale"] = Math.ceil(
+      +card.dataset["cost"] - +card.dataset["salecost"]
+    );
+    getTotalCartCost();
   });
 });

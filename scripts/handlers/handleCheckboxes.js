@@ -5,7 +5,7 @@ const paymentCheckboxCaption = document.querySelector(".payment__caption");
 const orderBtn = document.querySelector(".result__btn");
 const totalSum = document.querySelector(".result__sum");
 
-// Обработка чекбокса "списать оплату"
+// Обработка чекбокса "Списать оплату"
 paymentCheckbox.addEventListener("change", (event) => {
   if (event.target.checked) {
     orderBtn.textContent = "Оплатить " + totalSum.textContent;
@@ -16,6 +16,7 @@ paymentCheckbox.addEventListener("change", (event) => {
   }
 });
 
+// Обработка чекбокса "Выбрать все"
 const checkAll = (myCheckbox) => {
   if (myCheckbox.checked === true) {
     checkboxes.forEach((checkbox) => {

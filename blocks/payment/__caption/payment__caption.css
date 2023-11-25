@@ -3,3 +3,16 @@
   order: 1;
   margin: 8px 0 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .payment__caption {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .payment__caption {
+    width: 400px;
+    margin-top: 4px;
+  }
+}

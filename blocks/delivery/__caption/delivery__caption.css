@@ -5,3 +5,9 @@
   color: #000;
   margin: 6px 0 0 8px;
 }
+
+@media screen and (max-width: 1024px) {
+  .delivery__caption {
+    margin-top: 0;
+  }
+}
